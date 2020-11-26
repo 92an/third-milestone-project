@@ -1,13 +1,15 @@
 ## Table of Content
 
 - [Technologies Used:](#technologies-used)
-  - [Languages:](#languages)
-  - [Libraries and Frameworks:](#libraries-and-frameworks)
-  - [Tools](#tools)
+    - [Languages:](#languages)
+    - [Libraries and Frameworks:](#libraries-and-frameworks)
+    - [Tools](#tools)
 - [Project Purpose:](#project-purpose)
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
-
+- [References:](#References)
+    - [Logo:](#Logo)
+    
 # Technologies Used:
 
 ## Languages:
@@ -59,3 +61,11 @@ such as models and theories, using a community-built dictionary. Enable discussi
 * As an admin I should be able to edit and delete terms by all users.
 * As an admin I should be able to enter chatrooms to moderate debates.
 * As an admin I should be able to contact registered users.
+
+# References:
+
+## Logo:
+
+Created using an online platform:
+https://howtostartanllc.com/logo-maker?trugdlgg1&gclid=Cj0KCQiAwf39BRCCARIsALXWETyYp7IHpeyaZ6fTY8V6deaA-XzK0N1Dz-VB9KUrkg_MKkxOGINyFzgaAkR0EALw_wcB 
+
