@@ -1,5 +1,10 @@
 ## Table of Content
 
+- [Deployment:](#Deployment)
+    - [Preperation:](#Preperation)
+    - [Deployment with Heroku CLI:](#Deployment-with-Heroku-CLI)
+    - [Deployment with Github Automatic Deployment:](#Deployment-with-Github-Automatic-Deployment)
+    - [More Information:](#More-Information)
 - [Technologies Used:](#technologies-used)
     - [Languages:](#languages)
     - [Libraries and Frameworks:](#libraries-and-frameworks)
@@ -9,7 +14,79 @@
 - [Admin functionality:](#Admin-functionality)
 - [References:](#References)
     - [Logo:](#Logo)
-    
+
+# Deployment:
+
+The deployment of this project is done on heroku and 
+the code is written using gitpod.
+
+Assuming that you have created a MongoDB account with corresponding
+shema to be used in the project. 
+
+Assuming that the critical key value pairs that are confidential 
+are stored in a env.py file that is not pushed to github.
+
+## Preperation:
+
+1. Log in to Heroku and create a "New App" with a unique name
+
+2. Before deployment we have to inform heroku what dependencies 
+our project has in a txt file called requirements. To do this use the
+line of code below. 
+
+```
+pip3 freeze --local > requirements.txt
+```
+3. The next step is to create a Procfile using the following command.
+```
+echo web: python run.py > Procfile
+```
+4. Push these files to github.
+
+5. The key value pairs that are hidden in the "env.py" file 
+need to be specified in the settings field. In Heroku go to
+settings and reveal "config vars" then specify the keys there.
+
+## Deployment with Heroku CLI: 
+
+1. Install Heroku CLI.
+
+2. log in to Heroku using the following command.
+
+```
+$ heroku login
+```
+3. (if working on a computer locally) clone repository. 
+```
+$ heroku git:clone -a econhub
+$ cd econhub
+```
+4. To implement changes to the code and pushing them to Heroku
+use the following lines of code.
+```
+$ git add .
+$ git commit -m "Commit comments here!"
+$ git push heroku master
+```
+
+
+## Deployment with Github Automatic Deployment:
+
+1. Go to the GitHub tab in the deploy section on Heroku.
+
+2. Type in you GitHub username and the corresponding repository that you want to deploy.
+
+3. Enable automatic deployment.
+
+4. Select the Branch you want to deploy, and click on the deploy branch button.
+
+## More Information:
+
+For any additional information please refer to the deployment 
+documentation which can be found [here](https://devcenter.heroku.com/categories/deployment)
+
+How to clone git reposirtories can be found [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
 # Technologies Used:
 
 ## Languages:
@@ -17,6 +94,7 @@
 * CSS3 
 * Javascript
 * Python
+    * For dependencies I refer to the requirements.txt file
 * Jinja Templating language
 
 ## Libraries and Frameworks:
@@ -29,6 +107,7 @@
 * Gitpod
 * Git
 * Github
+* Heroku
 * Chrome Dev Tools
 * Mongo DB
 
