@@ -4,10 +4,10 @@
 
     <h2>terms header</h2>
     {% for term in terms %}
-        {{term.term_name}}<br>
-        {{term.category_name}}<br>
-        {{term.definition}}<br>
-        {{term.source_url}}<br>
+        <p> {{term.term_name}} </p><br>
+        <p> {{term.category_name}} </p><br>
+        <p> {{term.definition}} </p><br>
+        <p class="truncate"> {{term.source_url}} </p><br>
     {% endfor %}
 
 {% endblock %}
