@@ -13,6 +13,7 @@
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
 - [References:](#References)
+    - [Images:](#Images)
     - [Logo:](#Logo)
 
 # Deployment:
@@ -142,6 +143,15 @@ such as models and theories, using a community-built dictionary. Enable discussi
 * As an admin I should be able to contact registered users.
 
 # References:
+
+## Images
+Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2365538">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2365538">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/stevepb-282134/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1726618">Steve Buissinne</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1726618">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/pix1861-468748/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1905225">Csaba Nagy</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1905225">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/ahmadardity-3112014/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1730089">Ahmad Ardity</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1730089">Pixabay</a>
 
 ## Logo:
 
