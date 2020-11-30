@@ -18,6 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def homepage():
+    return render_template("homepage.html")
+
+
 @app.route("/get_terms")
 def get_term():
     terms = mongo.db.terms.find()
