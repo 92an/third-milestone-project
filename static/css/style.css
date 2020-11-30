@@ -6,6 +6,10 @@
     font-family: "Lora", serif;
 }
 
+.main-text {
+    font-family: "Open Sans", serif;
+}
+
 /* Navigation bar */
 
 .nav-wrapper {
@@ -14,7 +18,7 @@
 }
 
 .nav-wrapper ul li a {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .econ-logo {
@@ -33,3 +37,16 @@
 }
 
 /* Footer */
+
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
+
