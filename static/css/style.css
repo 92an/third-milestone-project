@@ -10,6 +10,14 @@
     font-family: "Open Sans", serif;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
 /* Navigation bar */
 
 .nav-wrapper {
