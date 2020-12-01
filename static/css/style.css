@@ -18,7 +18,7 @@
     text-transform: capitalize;
 }
 
-/* Navigation bar */
+/************************************************ Navigation bar ******************************************************/
 
 .nav-wrapper {
     height: 120px !important;
@@ -57,7 +57,9 @@
     flex: 1 0 auto;
   }
 
-/* homepage */
+/******************************************* homepage ************************************************/
+
+/* .carousel styling */
 
 .carousel {
     height: 400px !important;
@@ -75,3 +77,11 @@
     }
 }
 
+/* card styling */
+
+@media only screen and (max-width: 600px) {
+    .card.horizontal .card-image img {
+        margin-top: 50%;
+        margin-bottom: 50%;
+    }
+}

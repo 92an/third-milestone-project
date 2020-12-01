@@ -155,6 +155,8 @@ Image by <a href="https://pixabay.com/users/ahmadardity-3112014/?utm_source=link
 
 Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=499481">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=499481">Pixabay</a>
 
+Keynes image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes.jpg)
+
 ## Logo:
 
 Created using an online platform:
