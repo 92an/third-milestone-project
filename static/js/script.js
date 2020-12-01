@@ -5,4 +5,8 @@
         fullWidth: true,
         indicators: true
     });
+        // function that will automate the carousel
+        setInterval(function(){
+            $('.carousel').carousel('next');
+        }, 12000);
   });
