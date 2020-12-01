@@ -85,3 +85,7 @@
         margin-bottom: 50%;
     }
 }
+
+.mobile-cards img {
+    height: 200px;
+}
