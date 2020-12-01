@@ -14,13 +14,13 @@
 <!-- Cards of quotes for desktop layout -->
 <div class="row hide-on-med-and-down">
     <div class="col s12 m6">
-        <div class="card horizontal ">
+        <div class="card horizontal desktop-card">
             <div class="card-image">
                 <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
             </div>
             <div class="card-stacked">
             <div class="card-content">
-                <p>
+                <p class="main-text">
                     “The ideas of economists and political philosophers, 
                     both when they are right and when they are wrong are more powerful than is commonly understood. 
                     Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
@@ -28,73 +28,72 @@
                 </p>
             </div>
             <div class="card-action">
-                <h6>John Maynard Keynes</h6>
+                <h6 class="heading">John Maynard Keynes</h6>
             </div>
             </div>
         </div>
     </div>
         <div class="col s12 m6">
-            <div class="card horizontal">
+            <div class="card horizontal desktop-card">
                 <div class="card-image">
-                    <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
+                    <img src="{{ url_for('static', filename = 'img/rothbard.jpg') }}">
                 </div>
                 <div class="card-stacked">
                 <div class="card-content">
-                    <p>
-                        “The ideas of economists and political philosophers, 
-                        both when they are right and when they are wrong are more powerful than is commonly understood. 
-                        Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
-                        from any intellectual influences, are usually slaves of some defunct economist.”
+                    <p class="main-text">
+                        “It is no crime to be ignorant of economics, which is, after all, a specialized discipline and one that most people 
+                        consider to be a ‘dismal science.’ But it is totally irresponsible to have a loud and vociferous opinion on economic 
+                        subjects while remaining in this state of ignorance.”
                     </p>
                 </div>
                 <div class="card-action">
-                    <h6>John Maynard Keynes</h6>
+                    <h6 class="heading">Murray N Rothbard</h6>
                 </div>
             </div>
         </div>
     </div>
     <div class="col s12 m6">
-        <div class="card horizontal">
+        <div class="card horizontal desktop-card">
             <div class="card-image">
-                <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
+                <img src="{{ url_for('static', filename = 'img/smith.jpg') }}">
             </div>
             <div class="card-stacked">
                 <div class="card-content">
-                    <p>
-                        “The ideas of economists and political philosophers, 
-                        both when they are right and when they are wrong are more powerful than is commonly understood. 
-                        Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
-                        from any intellectual influences, are usually slaves of some defunct economist.”
+                    <p class="main-text">
+                        “It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, 
+                        but from their regard to their own self-interest. We address ourselves not to their humanity but to their self-love, 
+                        and never talk to them of our own necessities, but of their advantages”
                     </p>
                 </div>
                 <div class="card-action">
-                    <h6>John Maynard Keynes</h6>
+                    <h6 class="heading">Adam Smith</h6>
                 </div>
             </div>
         </div>
     </div>    
     <div class="col s12 m6">
-        <div class="card horizontal">
+        <div class="card horizontal desktop-card">
                 <div class="card-image">
-                    <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
+                    <img src="{{ url_for('static', filename = 'img/marx.jpg') }}">
                 </div>
                 <div class="card-stacked">
                 <div class="card-content">
-                    <p>
-                        “The ideas of economists and political philosophers, 
-                        both when they are right and when they are wrong are more powerful than is commonly understood. 
-                        Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
-                        from any intellectual influences, are usually slaves of some defunct economist.”
+                    <p class="main-text">
+                        “A use-value, or useful article, therefore, has value only because abstract human labour is objectified or materialized in it. 
+                        How, then, is the magnitude of value to be measured? By means of the quantity of the "value-forming substance", the labour, 
+                        contained in the article. This quantity is measured by its duration, 
+                        and the labour-time is itself measured on the particular scale of hours, days etc.”
                     </p>
                 </div>
                 <div class="card-action">
-                    <h6>John Maynard Keynes</h6>
+                    <h6 class="heading">Karl Marx</h6>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Cards for mobile and tablet view -->
 <div class="row hide-on-large-only">
     <div class="col s12 m6">
         <div class="card mobile-cards">
@@ -102,7 +101,7 @@
                 <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
             </div>
             <div class="card-content">
-                <p>
+                <p class="main-text">
                     “The ideas of economists and political philosophers, 
                     both when they are right and when they are wrong are more powerful than is commonly understood. 
                     Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
@@ -110,61 +109,59 @@
                 </p>
             </div>
             <div class="card-action">
-                John Maynard Kaynes
+               <h6 class="heading">John Maynard Kaynes</h6> 
             </div>
         </div>
     </div>
     <div class="col s12 m6">
         <div class="card mobile-cards">
             <div class="card-image">
-                <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
+                <img src="{{ url_for('static', filename = 'img/rothbard.jpg') }}">
             </div>
             <div class="card-content">
-                <p>
-                    “The ideas of economists and political philosophers, 
-                    both when they are right and when they are wrong are more powerful than is commonly understood. 
-                    Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
-                    from any intellectual influences, are usually slaves of some defunct economist.”
+                <p class="main-text">
+                    “It is no crime to be ignorant of economics, which is, after all, a specialized discipline and one that most people 
+                    consider to be a ‘dismal science.’ But it is totally irresponsible to have a loud and vociferous opinion on economic 
+                    subjects while remaining in this state of ignorance.”
                 </p>
             </div>
             <div class="card-action">
-                John Maynard Kaynes
+               <h6 class="heading">Murray N Rothbard</h6> 
             </div>
         </div>
     </div>
     <div class="col s12 m6">
         <div class="card mobile-cards">
             <div class="card-image">
-                <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
+                <img src="{{ url_for('static', filename = 'img/smith.jpg') }}">
             </div>
             <div class="card-content">
-                <p>
-                    “The ideas of economists and political philosophers, 
-                    both when they are right and when they are wrong are more powerful than is commonly understood. 
-                    Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
-                    from any intellectual influences, are usually slaves of some defunct economist.”
+                <p class="main-text">
+                    “It is not from the benevolence of the butcher, the brewer, or the baker that we expect our dinner, 
+                    but from their regard to their own self-interest. We address ourselves not to their humanity but to their self-love, 
+                    and never talk to them of our own necessities, but of their advantages”
                 </p>
             </div>
             <div class="card-action">
-                John Maynard Kaynes
+               <h6 class="heading">Adam Smith</h6> 
             </div>
         </div>
     </div>
     <div class="col s12 m6">
         <div class="card mobile-cards">
             <div class="card-image">
-                <img src="{{ url_for('static', filename = 'img/keynes.jpg') }}">
+                <img src="{{ url_for('static', filename = 'img/marx.jpg') }}">
             </div>
             <div class="card-content">
-                <p>
-                    “The ideas of economists and political philosophers, 
-                    both when they are right and when they are wrong are more powerful than is commonly understood. 
-                    Indeed, the world is ruled by little else. Practical men, who believe themselves to be quite exempt 
-                    from any intellectual influences, are usually slaves of some defunct economist.”
+                <p class="main-text">
+                    “A use-value, or useful article, therefore, has value only because abstract human labour is objectified or materialized in it. 
+                    How, then, is the magnitude of value to be measured? By means of the quantity of the "value-forming substance", the labour, 
+                    contained in the article. This quantity is measured by its duration, 
+                    and the labour-time is itself measured on the particular scale of hours, days etc.”
                 </p>
             </div>
             <div class="card-action">
-                John Maynard Kaynes
+               <h6 class="heading">Karl Marx</h6> 
             </div>
         </div>
     </div>

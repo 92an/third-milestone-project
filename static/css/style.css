@@ -18,6 +18,16 @@
     text-transform: capitalize;
 }
 
+.btn {
+    font-family: "Lora", serif !important;
+    text-transform: capitalize !important;
+}
+
+.btn-large {
+    font-family: "Lora", serif !important;
+    text-transform: capitalize !important;
+}
+
 /************************************************ Navigation bar ******************************************************/
 
 .nav-wrapper {
@@ -84,6 +94,10 @@
         margin-top: 50%;
         margin-bottom: 50%;
     }
+}
+
+.desktop-card img {
+    height: 350px;  
 }
 
 .mobile-cards img {

@@ -157,6 +157,13 @@ Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribu
 
 Keynes image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes.jpg)
 
+Rothbard image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:Murray_Rothbard.jpg)
+
+Adam Smith image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:Adam_Smith_D8.jpg)
+
+Marx image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:Adam_Smith_D8.jpg)
+
+
 ## Logo:
 
 Created using an online platform:
