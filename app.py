@@ -31,6 +31,27 @@ def get_term():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # check first if there is an existing user with that username
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        # Flash message if user is found
+        if existing_user:
+            flash("The username is taken, please choose another")
+            return redirect(url_for("register"))
+
+        # Register the user by inserting into database
+        user_to_register = {
+            "username": request.form.get("username").lower(),
+            "email": request.form.get("email"),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(user_to_register)
+
+        # place the new user into a session cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Registration is sucessfull")
     return render_template("register.html")
 
 
