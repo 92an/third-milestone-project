@@ -103,3 +103,9 @@
 .mobile-cards img {
     height: 200px;
 }
+
+/******************************************* Forms styles ************************************************/
+
+.webforms {
+    margin-top: 35px !important;
+}
