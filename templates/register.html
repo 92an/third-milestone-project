@@ -2,29 +2,40 @@
 
 {% block content %}
 
+<h2 class="header center-align capitalize">Registration form</h2>
+
 <div class="row container webforms">
-    <form class="col s12 m10 offset-m1">
+    <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
+                <!-- username input -->
                 <div class="row ">
                     <div class="input-field col s12">
                         <i class="fas fa-user prefix"></i>
-                        <input id="username" type="text" class="validate">
+                        <input id="username" name="username" type="text" class="validate">
                         <label for="username">Username</label>
                     </div>
                 </div>
+                <!-- email imput -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-envelope prefix"></i>
-                        <input id="email" type="email" class="validate">
+                        <input id="email" name="email" type="email" class="validate">
                         <label for="email">Email</label>
                     </div>
                 </div>
+                <!-- password imput -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-lock prefix"></i>
-                        <input id="password" type="password" class="validate">
+                        <input id="password" name="password" type="password" class="validate">
                         <label for="password">Password</label>
                     </div>
+                </div>
+                <!-- button to register -->
+                <div class="row">
+                    <button type="submit" class="col s8 offset-s2 btn-large blue-grey darken-3 header">
+                        Register <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
     </form>  
