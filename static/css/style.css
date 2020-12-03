@@ -28,6 +28,11 @@
     text-transform: capitalize !important;
 }
 
+.flashes {
+    line-height: 3;
+    margin-top: 0 !important;
+}
+
 /************************************************ Navigation bar ******************************************************/
 
 .nav-wrapper {
