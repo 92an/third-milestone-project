@@ -13,6 +13,7 @@
 </head>
 <body class="grey lighten-2">
     
+    <!-- Head section for navigation -->
     <header>
         <!-- main navbar for desktop / tablet -->
         <nav class="nav-extended grey darken-2">
@@ -39,11 +40,24 @@
         </ul>        
     </header>
     
+    <!-- section for flash messages -->
+    <section>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4 class="flashes">{{ message }}</h4>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+
+    <!-- main content -->
     <main>
         {% block content %}
         {% endblock %}
     </main>
 
+    <!-- footer section -->
     <footer class="page-footer grey darken-2">
         <div class="container">
             <div class="row">
