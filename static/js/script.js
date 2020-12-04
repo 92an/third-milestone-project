@@ -16,4 +16,7 @@
 
     // Dropdown functionality materialize
     $(".dropdown-trigger").dropdown();
+    
+    // accordian functionality materialize
+    $('.collapsible').collapsible();
   });
