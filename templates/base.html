@@ -42,12 +42,15 @@
         <!-- sidenav for mobile view -->
         <ul class="sidenav grey lighten-2"" id="mobile-demo">
             <li><a href="{{ url_for('homepage') }}" class="heading center-align">Home</a></li>
-            <li><a href="#" class="heading center-align">Dictionary</a></li>
-            <li><a href="#" class="heading center-align">Chattrooms</a></li>
-            <li><a href="{{ url_for('profile', username=session['user']) }}" class="heading btn-large blue-grey darken-3">My Profile</a></li>
-            <li><a href="{{ url_for('logout') }}" class="heading btn-large cyan darken-3">Log Out</a></li>
-            <li><a href="{{ url_for('register') }}" class="heading btn-large blue-grey darken-3">Register</a></li>
-            <li><a href="{{ url_for('login') }}" class="heading btn-large cyan darken-3">Log In</a></li>
+            {% if session.user %}
+                <li><a href="#" class="heading center-align">Dictionary</a></li>
+                <li><a href="#" class="heading center-align">Chattrooms</a></li>
+                <li><a href="{{ url_for('profile', username=session['user']) }}" class="heading btn-large blue-grey darken-3">My Profile</a></li>
+                <li><a href="{{ url_for('logout') }}" class="heading btn-large cyan darken-3">Log Out</a></li>
+            {% else %}
+                <li><a href="{{ url_for('register') }}" class="heading btn-large blue-grey darken-3">Register</a></li>
+                <li><a href="{{ url_for('login') }}" class="heading btn-large cyan darken-3">Log In</a></li>
+            {% endif %}
         </ul>        
     </header>
     
