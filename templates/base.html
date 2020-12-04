@@ -29,7 +29,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('homepage') }}" class="heading capitalize">Home</a></li>
                     {% if session.user %}
-                        <li><a href="#" class="heading capitalize">Dictionary</a></li>
+                        <li><a href="{{ url_for('get_terms') }}" class="heading capitalize">Dictionary</a></li>
                         <li><a href="#" class="heading capitalize">Chattrooms</a></li>
                         <li><a href="#" class="btn-large blue-grey darken-3 heading dropdown-trigger" data-target="username-dropdown">Username</a></li>
                     {% else %}
@@ -43,7 +43,7 @@
         <ul class="sidenav grey lighten-2"" id="mobile-demo">
             <li><a href="{{ url_for('homepage') }}" class="heading center-align">Home</a></li>
             {% if session.user %}
-                <li><a href="#" class="heading center-align">Dictionary</a></li>
+                <li><a href="{{ url_for('get_terms') }}" class="heading center-align">Dictionary</a></li>
                 <li><a href="#" class="heading center-align">Chattrooms</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="heading btn-large blue-grey darken-3">My Profile</a></li>
                 <li><a href="{{ url_for('logout') }}" class="heading btn-large cyan darken-3">Log Out</a></li>
