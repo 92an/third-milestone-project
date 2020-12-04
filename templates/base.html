@@ -16,6 +16,11 @@
     <!-- Head section for navigation -->
     <header>
         <!-- main navbar for desktop / tablet -->
+        <!-- Dropdown Structure -->
+        <ul id="username-dropdown" class="dropdown-content grey darken-2">
+            <li><a href="#!" class="heading white-text">My Profile</a></li>
+            <li><a href="#!" class="heading white-text">Logout</a></li>
+        </ul>
         <nav class="nav-extended grey darken-2">
             <div class="nav-wrapper">
                 <a href="{{ url_for('homepage') }}"><img src="{{ url_for('static', filename = 'img/logo.jpg') }}" alt="logo" class="brand-logo econ-logo"></a>
@@ -25,7 +30,8 @@
                     <li><a href="{{ url_for('homepage') }}" class="heading capitalize">Home</a></li>
                     <li><a href="#" class="heading capitalize">Dictionary</a></li>
                     <li><a href="#" class="heading capitalize">Chattrooms</a></li>
-                    <li><a href="{{ url_for('register') }}"class="btn-large blue-grey darken-3 heading">Register</a></li>
+                    <li><a href="#" class="btn-large blue-grey darken-3 heading dropdown-trigger" data-target="username-dropdown">Username</a></li>
+                    <li><a href="{{ url_for('register') }}" class="btn-large blue-grey darken-3 heading">Register</a></li>
                     <li><a href="{{ url_for('login') }}" class="btn-large cyan darken-3 heading">Log In</a></li>
                 </ul>
             </div>
@@ -35,6 +41,8 @@
             <li><a href="{{ url_for('homepage') }}" class="heading center-align">Home</a></li>
             <li><a href="#" class="heading center-align">Dictionary</a></li>
             <li><a href="#" class="heading center-align">Chattrooms</a></li>
+            <li><a href="#" class="heading btn-large blue-grey darken-3">My Profile</a></li>
+            <li><a href="#" class="heading btn-large cyan darken-3">Log Out</a></li>
             <li><a href="{{ url_for('register') }}" class="heading btn-large blue-grey darken-3">Register</a></li>
             <li><a href="{{ url_for('login') }}" class="heading btn-large cyan darken-3">Log In</a></li>
         </ul>        
