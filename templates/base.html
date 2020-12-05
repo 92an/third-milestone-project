@@ -31,7 +31,7 @@
                     {% if session.user %}
                         <li><a href="{{ url_for('get_terms') }}" class="heading capitalize">Dictionary</a></li>
                         <li><a href="#" class="heading capitalize">Chattrooms</a></li>
-                        <li><a href="#" class="btn-large blue-grey darken-3 heading dropdown-trigger" data-target="username-dropdown">Username</a></li>
+                        <li><a href="#" class="btn-large blue-grey darken-3 heading dropdown-trigger" data-target="username-dropdown">{{ username }}</a></li>
                     {% else %}
                         <li><a href="{{ url_for('register') }}" class="btn-large blue-grey darken-3 heading">Register</a></li>
                         <li><a href="{{ url_for('login') }}" class="btn-large cyan darken-3 heading">Log In</a></li>

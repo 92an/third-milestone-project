@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template,
+    Flask, flash, render_template, g,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -18,15 +18,29 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.before_request
+def before_request():
+    g.user = None
+
+    if "user" in session:
+        g.user = session["user"]
+
+
 @app.route("/")
 def homepage():
+
+    if g.user:
+        username = session["user"]
+        return render_template("homepage.html", username=username)
+
     return render_template("homepage.html")
 
 
 @app.route("/get_terms")
 def get_terms():
+    username = session["user"]
     terms = list(mongo.db.terms.find())
-    return render_template("terms.html", terms=terms)
+    return render_template("terms.html", terms=terms, username=username)
 
 
 @app.route("/add_term")

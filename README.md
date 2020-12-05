@@ -12,6 +12,7 @@
 - [Project Purpose:](#project-purpose)
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
+- [Bugs:](#Bugs)
 - [References:](#References)
     - [Images:](#Images)
     - [Logo:](#Logo)
@@ -141,6 +142,23 @@ such as models and theories, using a community-built dictionary. Enable discussi
 * As an admin I should be able to edit and delete terms by all users.
 * As an admin I should be able to enter chatrooms to moderate debates.
 * As an admin I should be able to contact registered users.
+
+# Bugs
+
+Bug when create username profile button in nav responsive to the user logged in. 
+Complained about not having access to session cookie when logged out.
+Solved using a global variable g package
+
+[Found solution here](https://www.youtube.com/watch?v=PrsmxWdthg0)
+
+```
+@app.before_request
+def before_request():
+    g.user = None
+
+    if "user" in session:
+        g.user = session["user"]
+```
 
 # References:
 
