@@ -29,6 +29,11 @@ def get_terms():
     return render_template("terms.html", terms=terms)
 
 
+@app.route("/add_term")
+def add_term():
+    return render_template("add_term.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
