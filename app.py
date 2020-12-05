@@ -25,7 +25,7 @@ def homepage():
 
 @app.route("/get_terms")
 def get_terms():
-    terms = mongo.db.terms.find()
+    terms = list(mongo.db.terms.find())
     return render_template("terms.html", terms=terms)
 
 

@@ -13,34 +13,36 @@
     <div class="row">
         <div class="col s5 offset-s1">
             <ul class="collapsible grey darken-2">
+            {% for term in terms %}
                 <li>
-                    <div class="collapsible-header grey darken-3 white-text header"><i class="fas fa-caret-down"></i>First</div>
-                    <div class="collapsible-body white main-text"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header grey darken-3 white-text header">
+                        <i class="fas fa-caret-down"></i>
+                        <strong>{{term.term_name}}</strong>
+                    </div>
+                    <div class="collapsible-body white main-text">
+                       <strong>{{term.category_name}}</strong>
+                       <p>{{term.definition}}</p><br>
+                       <a href="{{term.source_url}}">Read More Here</a> 
+                    </div>
                 </li>
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header"><i class="fas fa-caret-down"></i>Second</div>
-                    <div class="collapsible-body white main-text"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header"><i class="fas fa-caret-down"></i>Third</div>
-                    <div class="collapsible-body white main-text"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
+            {% endfor %}
             </ul>
         </div>
         <div class="col s5">
             <ul class="collapsible">
+            {% for term in terms %}
                 <li>
-                    <div class="collapsible-header grey darken-3 white-text header"><i class="fas fa-caret-down"></i>First</div>
-                    <div class="collapsible-body white main-text"><span>Lorem ipsum dolor sit amet.</span></div>
+                    <div class="collapsible-header grey darken-3 white-text header">
+                        <i class="fas fa-caret-down"></i>
+                        <strong>{{term.term_name}}</strong>
+                    </div>
+                    <div class="collapsible-body white main-text">
+                       <strong>{{term.category_name}}</strong>
+                       <p>{{term.definition}}</p><br>
+                       <a href="{{term.source_url}}">Read More Here</a> 
+                    </div>
                 </li>
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header"><i class="fas fa-caret-down"></i>Second</div>
-                    <div class="collapsible-body white main-text"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header"><i class="fas fa-caret-down"></i>Third</div>
-                    <div class="collapsible-body white main-text"><span>Lorem ipsum dolor sit amet.</span></div>
-                </li>
+            {% endfor %}
             </ul>
         </div>
     </div>
