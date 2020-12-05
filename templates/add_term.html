@@ -4,4 +4,52 @@
 
 <h2 class="header capitalize center-align">Add term to dictionary</h2>
 
+<div class="row container webforms">
+    <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('login') }}">
+        <div class="card-panel">
+            <!-- term input -->
+            <div class="row ">
+                <div class="input-field col s12">
+                    <i class="fas fa-file prefix"></i>
+                    <input id="term_name" name="term_name" type="text" class="validate" maxlength="70" required>
+                    <label for="term_name">Term Name</label>
+                </div>
+            </div>
+            <!-- Category input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder prefix"></i>
+                    <select>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                    <label>Category Selection</label>
+                </div>
+            </div>
+            <!-- Description input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix"></i>
+                    <textarea id="description" name="description" maxlength="600" class="materialize-textarea"></textarea>
+                    <label for="description">Description</label>
+                </div>
+            </div>
+            <!-- Source input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-link prefix"></i>
+                    <input id="source_url" name="source_url" type="text" class="validate" required>
+                    <label for="source_url">Source</label>
+                </div>
+            </div>
+            <!-- button to login -->
+            <div class="row">
+                <button type="submit" class="col s8 offset-s2 btn-large blue-grey darken-3 header">
+                    Add Term to dictionary
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
 {% endblock %}

@@ -19,4 +19,7 @@
     
     // accordian functionality materialize
     $('.collapsible').collapsible();
+
+    // select dropdownfunctionality materialize
+    $('select').formSelect();
   });
