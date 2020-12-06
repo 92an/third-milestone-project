@@ -45,7 +45,8 @@ def get_terms():
 
 @app.route("/add_term")
 def add_term():
-    return render_template("add_term.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_term.html", categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])

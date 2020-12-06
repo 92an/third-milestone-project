@@ -20,9 +20,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder prefix"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
+                        {% for category in categories %}
+                            {% if category.category_name  == "General Concept" %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
+                        {% endfor %}
                     </select>
                     <label>Category Selection</label>
                 </div>
