@@ -30,5 +30,25 @@
         </div>
     </div>  
 </div>
+ <div class="row container">
+        <div class="col s12">
+            <ul class="collapsible grey darken-2">
+            {% for term in terms %}
+                <li>
+                    <div class="collapsible-header grey darken-3 white-text header">
+                        <i class="fas fa-caret-down"></i>
+                        <strong class="capitalize header">{{term.term_name}}</strong>
+                    </div>
+                    <div class="collapsible-body white main-text">
+                       <h6 class="capitalize header">{{term.category_name}}</h6>
+                       <p class="main-text">{{term.definition}}</p><br>
+                       <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
+                       <p class="header capitalize">By: {{term.created_by}}</p><br>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}

@@ -18,7 +18,8 @@
                     <div class="collapsible-body white main-text">
                        <h6 class="capitalize header">{{term.category_name}}</h6>
                        <p class="main-text">{{term.definition}}</p><br>
-                       <a target="_blank" href="{{term.source_url}}">Read More Here</a> 
+                       <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
+                       <p class="header capitalize">By: {{term.created_by}}</p>
                     </div>
                 </li>
             {% endif %}
@@ -37,7 +38,8 @@
                     <div class="collapsible-body white main-text">
                        <h6 class="capitalize header">{{term.category_name}}</h6>
                        <p class="main-text">{{term.definition}}</p><br>
-                       <a target="_blank" href="{{term.source_url}}">Read More Here</a> 
+                       <a target="_blank" href="{{term.source_url}}">Read More Here</a>
+                       <p class="header capitalize">By: {{term.created_by}}</p> 
                     </div>
                 </li>
             {% endif %}

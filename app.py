@@ -18,6 +18,8 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# creates a global variable that is called
+# before request checking if there is a user in session
 @app.before_request
 def before_request():
     g.user = None
@@ -43,10 +45,23 @@ def get_terms():
     return render_template("terms.html", terms=terms, username=username)
 
 
-@app.route("/add_term")
+@app.route("/add_term", methods=["GET", "POST"])
 def add_term():
+    if request.method == "POST":
+        term = {
+            "term_name": request.form.get("term_name"),
+            "category_name": request.form.get("category_name"),
+            "description": request.form.get("description"),
+            "created_by": session["user"]
+        }
+        mongo.db.terms.insert_one(term)
+        flash("Your term ha been added to the dictonary")
+        return redirect(url_for("get_terms"))
+
+    username = session["user"]
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_term.html", categories=categories)
+    return render_template(
+        "add_term.html", categories=categories, username=username)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -112,14 +127,14 @@ def logout():
     return redirect(url_for("login"))
 
 
-
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        terms = list(mongo.db.terms.find())
+        return render_template("profile.html", username=username, terms=terms)
 
     return redirect(url_for("login"))
 

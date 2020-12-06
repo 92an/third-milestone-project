@@ -5,7 +5,7 @@
 <h2 class="header capitalize center-align">Add term to dictionary</h2>
 
 <div class="row container webforms">
-    <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('login') }}">
+    <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('add_term') }}">
         <div class="card-panel">
             <!-- term input -->
             <div class="row ">
@@ -35,8 +35,8 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix"></i>
-                    <textarea id="description" name="description" maxlength="600" class="materialize-textarea validate"></textarea>
-                    <label for="description">Description</label>
+                    <textarea id="definition" name="definition" maxlength="600" class="materialize-textarea validate"></textarea>
+                    <label for="definition">Definition</label>
                 </div>
             </div>
             <!-- Source input -->
@@ -47,7 +47,7 @@
                     <label for="source_url">Source</label>
                 </div>
             </div>
-            <!-- button to login -->
+            <!-- button to submitt -->
             <div class="row">
                 <button type="submit" class="col s8 offset-s2 btn-large blue-grey darken-3 header">
                     Add Term to dictionary
