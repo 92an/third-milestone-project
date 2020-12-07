@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="header capitalize center-align">Edit Term: {{term.term_name}}</h2>
+
+<div class="row container webforms">
+    <form class="col s12 m10 offset-m1" method="POST" action="{{ url_for('edit_term', term_id=term._id  ) }}">
+        <div class="card-panel">
+            <!-- term input -->
+            <div class="row ">
+                <div class="input-field col s12">
+                    <i class="fas fa-file prefix"></i>
+                    <input id="term_name" name="term_name" type="text" class="validate" maxlength="70" required>
+                    <label for="term_name">Term Name</label>
+                </div>
+            </div>
+            <!-- Category input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder prefix"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        {% for category in categories %}
+                            {% if category.category_name  == "General Concept" %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    </select>
+                    <label>Category Selection</label>
+                </div>
+            </div>
+            <!-- Description input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix"></i>
+                    <textarea id="definition" name="definition" maxlength="600" class="materialize-textarea validate"></textarea>
+                    <label for="definition">Definition</label>
+                </div>
+            </div>
+            <!-- Source input -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-link prefix"></i>
+                    <input id="source_url" name="source_url" type="text" class="validate" required>
+                    <label for="source_url">Source</label>
+                </div>
+            </div>
+            <!-- button to submitt -->
+            <div class="row">
+                <button type="submit" class="col s8 offset-s2 btn-large blue-grey darken-3 header">
+                    Update Term
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

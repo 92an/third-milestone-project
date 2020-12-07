@@ -44,6 +44,8 @@
                        <p class="main-text">{{term.definition}}</p><br>
                        <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
                        <p class="header capitalize">By: {{term.created_by}}</p><br>
+                        <a href="{{ url_for('edit_term', term_id=term._id) }}" class="btn-large blue-grey darken-3 heading">Edit</a>
+                        <a href="#" class="btn-large cyan darken-3 heading">Delete</a>
                     </div>
                 </li>
             {% endfor %}

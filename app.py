@@ -64,6 +64,15 @@ def add_term():
         "add_term.html", categories=categories, username=username)
 
 
+@app.route("/edit_term/<term_id>", methods=["GET", "POST"])
+def edit_term(term_id):
+    term = mongo.db.terms.find_one({"_id": ObjectId(term_id)})
+    username = session["user"]
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template(
+        "edit_term.html", term=term,  categories=categories, username=username)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
