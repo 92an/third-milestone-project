@@ -114,3 +114,14 @@
 .webforms {
     margin-top: 35px !important;
 }
+
+/******************************************* Category Management ************************************************/
+
+#category-container {
+    margin-bottom: 100px;
+}
+
+.card-title {
+        font-family: "Lora", serif !important;
+}
+
