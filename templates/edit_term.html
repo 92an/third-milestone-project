@@ -11,7 +11,7 @@
             <div class="row ">
                 <div class="input-field col s12">
                     <i class="fas fa-file prefix"></i>
-                    <input id="term_name" name="term_name" type="text" class="validate" maxlength="70" required>
+                    <input id="term_name" name="term_name" type="text" value="{{ term.term_name }}" class="validate" maxlength="70" required>
                     <label for="term_name">Term Name</label>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                     <i class="fas fa-folder prefix"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         {% for category in categories %}
-                            {% if category.category_name  == "General Concept" %}
+                            {% if category.category_name  == term.category_name %}
                                 <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                             {% else %}
                                 <option value="{{ category.category_name }}">{{ category.category_name }}</option>
@@ -35,7 +35,9 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-align-left prefix"></i>
-                    <textarea id="definition" name="definition" maxlength="600" class="materialize-textarea validate"></textarea>
+                    <textarea id="definition" name="definition" maxlength="600" class="materialize-textarea validate">
+                        {{- term.definition -}}
+                    </textarea>
                     <label for="definition">Definition</label>
                 </div>
             </div>
@@ -43,13 +45,16 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-link prefix"></i>
-                    <input id="source_url" name="source_url" type="text" class="validate" required>
+                    <input id="source_url" name="source_url" value="{{ term.source_url }}" type="text" class="validate" required>
                     <label for="source_url">Source</label>
                 </div>
             </div>
-            <!-- button to submitt -->
+            <!-- buttons to submitt and cancel -->
             <div class="row">
-                <button type="submit" class="col s8 offset-s2 btn-large blue-grey darken-3 header">
+                <a href="{{ url_for('profile', username=session['user']) }}"  class="col s3 offset-s2 btn-large blue-grey darken-3 header">
+                    Cancel
+                </a>
+                <button type="submit" class="col s3 offset-s2 btn-large blue-grey darken-3 header">
                     Update Term
                 </button>
             </div>
