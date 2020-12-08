@@ -38,6 +38,11 @@ def homepage():
     return render_template("homepage.html")
 
 
+""" the following four sections implements CRUD functionallity
+to the Economics Dictionary; they are implemented in the
+following order: Read, Create, Update and Delete. """
+
+
 @app.route("/get_terms")
 def get_terms():
     username = session["user"]
@@ -90,6 +95,11 @@ def delete_term(term_id):
     mongo.db.terms.remove({"_id": ObjectId(term_id)})
     flash("Term Removed from the Dictionary")
     return redirect(url_for('get_terms'))
+
+
+""" The following 3 sections of code handles user functionallity on the site.
+Registration, login, and log out; followed by the
+creation of a user profile route which serves as a hub for users"""
 
 
 @app.route("/register", methods=["GET", "POST"])
