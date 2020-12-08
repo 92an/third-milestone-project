@@ -13,6 +13,7 @@
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
 - [Bugs:](#Bugs)
+- [username responsive profile in navigation:](#username-responsive-profile-in-navigation)
 - [References:](#References)
     - [Images:](#Images)
     - [Logo:](#Logo)
@@ -145,6 +146,8 @@ such as models and theories, using a community-built dictionary. Enable discussi
 
 # Bugs
 
+## username responsive profile in navigation
+
 Bug when create username profile button in nav responsive to the user logged in. 
 Complained about not having access to session cookie when logged out.
 Solved using a global variable g package
@@ -160,6 +163,28 @@ def before_request():
         g.user = session["user"]
 ```
 
+## missing source information in adding terms
+
+I forgott to include a key value pairs
+
+```
+        term = {
+            "term_name": request.form.get("term_name"),
+            "category_name": request.form.get("category_name"),
+            "description": request.form.get("description"),
+        }
+```
+fixed it by adding the last line:
+
+```
+        term = {
+            "term_name": request.form.get("term_name"),
+            "category_name": request.form.get("category_name"),
+            "description": request.form.get("description"),
+            "source_url": request.form.get("source_url"),
+            "created_by": session["user"]
+        }
+```
 # References:
 
 ## Images

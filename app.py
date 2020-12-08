@@ -67,6 +67,17 @@ def add_term():
 
 @app.route("/edit_term/<term_id>", methods=["GET", "POST"])
 def edit_term(term_id):
+    if request.method == "POST":
+        term_update = {
+            "term_name": request.form.get("term_name"),
+            "category_name": request.form.get("category_name"),
+            "description": request.form.get("description"),
+            "source_url": request.form.get("source_url"),
+            "created_by": session["user"]
+        }
+        mongo.db.terms.update({"_id": ObjectId(term_id)}, term_update)
+        flash("Term is updated")
+
     term = mongo.db.terms.find_one({"_id": ObjectId(term_id)})
     username = session["user"]
     categories = mongo.db.categories.find().sort("category_name", 1)
