@@ -97,7 +97,25 @@ def delete_term(term_id):
     return redirect(url_for('get_terms'))
 
 
-""" The following 3 sections of code handles user functionallity on the site.
+"""the following four sections implements CRUD functionallity
+to the Categories in the Economics Dictionary; they are implemented in the
+following order: Read, Create, Update and Delete. """
+
+
+@app.route("/manage_categories")
+def manage_categories():
+    username = session["user"]
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template(
+        "categories.html", username=username, categories=categories)
+
+
+@app.route("/add_category")
+def add_category():
+    return render_template("add_category.html")
+
+
+"""The following 3 sections of code handles user functionallity on the site.
 Registration, login, and log out; followed by the
 creation of a user profile route which serves as a hub for users"""
 
@@ -175,14 +193,6 @@ def profile(username):
         return render_template("profile.html", username=username, terms=terms)
 
     return redirect(url_for("login"))
-
-
-@app.route("/manage_categories")
-def manage_categories():
-    username = session["user"]
-    categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template(
-        "categories.html", username=username, categories=categories)
 
 
 if __name__ == "__main__":
