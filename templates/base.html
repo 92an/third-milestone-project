@@ -19,6 +19,9 @@
         <!-- Dropdown Structure -->
         <ul id="username-dropdown" class="dropdown-content blue-grey darken-3">
             <li><a href="{{ url_for('profile', username=session['user']) }}" class="heading white-text">My Profile</a></li>
+            {% if session.user == "admin" %}
+                <li><a href="{{ url_for('manage_categories') }}" class="heading white-text">Manage Categories</a></li>
+            {% endif %}
             <li><a href="{{ url_for('logout') }}" class="heading white-text">Logout</a></li>
         </ul>
         <nav class="nav-extended grey darken-2">
@@ -46,6 +49,9 @@
                 <li><a href="{{ url_for('get_terms') }}" class="heading center-align">Dictionary</a></li>
                 <li><a href="#" class="heading center-align">Chattrooms</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}" class="heading btn-large blue-grey darken-3">My Profile</a></li>
+                {% if session.user == "admin" %}    
+                    <li><a href="{{ url_for('manage_categories') }}" class="heading btn-large blue-grey darken-3">Manage Categories</a></li>
+                {% endif %}
                 <li><a href="{{ url_for('logout') }}" class="heading btn-large cyan darken-3">Log Out</a></li>
             {% else %}
                 <li><a href="{{ url_for('register') }}" class="heading btn-large blue-grey darken-3">Register</a></li>

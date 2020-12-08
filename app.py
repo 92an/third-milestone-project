@@ -167,6 +167,11 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/manage_categories")
+def manage_categories():
+    username = session["user"]
+    return render_template("categories.html", username=username)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
