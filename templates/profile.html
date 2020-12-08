@@ -34,20 +34,22 @@
         <div class="col s12">
             <ul class="collapsible grey darken-2">
             {% for term in terms %}
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header">
-                        <i class="fas fa-caret-down"></i>
-                        <strong class="capitalize header">{{term.term_name}}</strong>
-                    </div>
-                    <div class="collapsible-body white main-text">
-                       <h6 class="capitalize header">{{term.category_name}}</h6>
-                       <p class="main-text">{{term.definition}}</p><br>
-                       <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
-                       <p class="header capitalize">By: {{term.created_by}}</p><br>
-                        <a href="{{ url_for('edit_term', term_id=term._id) }}" class="btn-large blue-grey darken-3 heading">Edit</a>
-                        <a href="{{ url_for('delete_term', term_id=term._id) }}" class="btn-large cyan darken-3 heading">Delete</a>
-                    </div>
-                </li>
+                {% if session.user|lower == term.created_by|lower or session.user|lower == "admin" %}
+                    <li>
+                        <div class="collapsible-header grey darken-3 white-text header">
+                            <i class="fas fa-caret-down"></i>
+                            <strong class="capitalize header">{{term.term_name}}</strong>
+                        </div>
+                        <div class="collapsible-body white main-text">
+                        <h6 class="capitalize header">{{term.category_name}}</h6>
+                        <p class="main-text">{{term.definition}}</p><br>
+                        <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
+                        <p class="header capitalize">By: {{term.created_by}}</p><br>
+                            <a href="{{ url_for('edit_term', term_id=term._id) }}" class="btn-large blue-grey darken-3 heading">Edit</a>
+                            <a href="{{ url_for('delete_term', term_id=term._id) }}" class="btn-large cyan darken-3 heading">Delete</a>
+                        </div>
+                    </li>
+                {% endif %}
             {% endfor %}
             </ul>
         </div>
