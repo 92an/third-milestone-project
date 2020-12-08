@@ -110,8 +110,16 @@ def manage_categories():
         "categories.html", username=username, categories=categories)
 
 
-@app.route("/add_category")
+@app.route("/add_category", methods=["POSt", "GET"])
 def add_category():
+    if request.method == "POST":
+        category = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Economic Category Added")
+        return redirect(url_for("manage_categories"))
+
     return render_template("add_category.html")
 
 

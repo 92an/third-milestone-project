@@ -119,9 +119,13 @@
 
 #category-container {
     margin-bottom: 100px;
+    
 }
 
 .card-title {
-        font-family: "Lora", serif !important;
+    font-family: "Lora", serif !important;
 }
 
+.category-cards {
+    height: 70px !important;
+}
