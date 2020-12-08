@@ -85,6 +85,13 @@ def edit_term(term_id):
         "edit_term.html", term=term,  categories=categories, username=username)
 
 
+@app.route("/delete_term/<term_id>")
+def delete_term(term_id):
+    mongo.db.terms.remove({"_id": ObjectId(term_id)})
+    flash("Term Removed from the Dictionary")
+    return redirect(url_for('get_terms'))
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
