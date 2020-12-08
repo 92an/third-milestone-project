@@ -52,6 +52,7 @@ def add_term():
             "term_name": request.form.get("term_name"),
             "category_name": request.form.get("category_name"),
             "description": request.form.get("description"),
+            "source_url": request.form.get("source_url"),
             "created_by": session["user"]
         }
         mongo.db.terms.insert_one(term)
