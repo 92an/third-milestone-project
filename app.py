@@ -123,6 +123,21 @@ def add_category():
     return render_template("add_category.html")
 
 
+@app.route("/edit_category/<category_id>", methods=["POSt", "GET"])
+def edit_category(category_id):
+    if request.method == "POST":
+        category_update = {
+            "category_name": request.form.get("category_name")
+        }
+        mongo.db.categories.update(
+            {"_id": ObjectId(category_id)}, category_update)
+        return redirect( url_for("manage_categories"))
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    username = session["user"]
+    return render_template(
+        "edit_category.html", category=category, username=username)
+
+
 """The following 3 sections of code handles user functionallity on the site.
 Registration, login, and log out; followed by the
 creation of a user profile route which serves as a hub for users"""
