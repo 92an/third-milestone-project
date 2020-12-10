@@ -49,7 +49,10 @@
             </div>
             <!-- button to submitt -->
             <div class="row">
-                <button type="submit" class="col s8 offset-s2 btn-large blue-grey darken-3 header">
+                <a href="{{ url_for('profile',  username=session['user']) }}" class="col s4 offset-s1 btn-large center-align blue-grey darken-3">
+                    Cancel                  
+                </a>
+                <button type="submit" class="col s4 offset-s2 btn-large blue-grey darken-3 header">
                     Add Term to dictionary
                 </button>
             </div>
