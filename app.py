@@ -42,8 +42,20 @@ def homepage():
 def search():
     username = session["user"]
     query = request.form.get("query")
-    terms = list(mongo.db.terms.find({"$text": {"$search": query}}))
-    return render_template("terms.html", terms=terms, username=username)
+    query_category = request.form.get("category_query")
+
+    if len(query) > 0:
+        terms = list(mongo.db.terms.find({"$text": {"$search": query}}))
+        return render_template("terms.html", terms=terms, username=username)
+
+    elif query_category != "":
+        terms = list(mongo.db.terms.find(
+            {"$text": {"$search": query_category}}))
+        return render_template("terms.html", terms=terms, username=username)
+
+    else:
+        terms = list(mongo.db.terms.find())
+        return render_template("terms.html", terms=terms, username=username)
 
 
 """ the following four sections implements CRUD functionallity
@@ -55,7 +67,8 @@ following order: Read, Create, Update and Delete. """
 def get_terms():
     username = session["user"]
     terms = list(mongo.db.terms.find())
-    return render_template("terms.html", terms=terms, username=username)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("terms.html", terms=terms, categories=categories, username=username)
 
 
 @app.route("/add_term", methods=["GET", "POST"])

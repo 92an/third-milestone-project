@@ -14,8 +14,18 @@
                 </div>
                 <form method="POST" action="{{ url_for('search') }}">
                     <div class="row">
-                        <div class="input-field col s12 white">
+                        <div class="input-field col s10 offset-s1 white">
                             <input id="query" name="query" type="text" class="validate" requred>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s10 offset-s1 white">
+                                <select id="category_query" name="category_query" class="validate" type="text">
+                                    <option value="" disabled selected>Select Category</option>
+                                    {% for category in categories %}
+                                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
                         </div>
                         <div class="row">
                             <a href="{{ url_for('get_terms') }}" class="col s4 offset-s1 btn-large center-align cyan darken-3">
@@ -30,7 +40,7 @@
             </div>
         </div>  
     </div>
-    
+
     <div class="row">
         {% if terms|length > 0 %}
         <div class="col m5 offset-m1 s12">
