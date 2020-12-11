@@ -32,47 +32,53 @@
     </div>
     
     <div class="row">
+        {% if terms|length > 0 %}
         <div class="col m5 offset-m1 s12">
             <ul class="collapsible grey darken-2">
             {% for term in terms %}
-            {% if loop.index % 2 != 0 %}
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header">
-                        <i class="fas fa-caret-down"></i>
-                        <strong class="capitalize header">{{term.term_name}}</strong>
-                    </div>
-                    <div class="collapsible-body white main-text">
-                       <h6 class="capitalize header">{{term.category_name}}</h6>
-                       <p class="main-text">{{term.definition}}</p><br>
-                       <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
-                       <p class="header capitalize">By: {{term.created_by}}</p>
-                    </div>
-                </li>
-            {% endif %}
+                {% if loop.index % 2 != 0 %}
+                    <li>
+                        <div class="collapsible-header grey darken-3 white-text header">
+                            <i class="fas fa-caret-down"></i>
+                            <strong class="capitalize header">{{term.term_name}}</strong>
+                        </div>
+                        <div class="collapsible-body white main-text">
+                        <h6 class="capitalize header">{{term.category_name}}</h6>
+                        <p class="main-text">{{term.definition}}</p><br>
+                        <a target="_blank" href="{{term.source_url}}">Read More Here</a><br>
+                        <p class="header capitalize">By: {{term.created_by}}</p>
+                        </div>
+                    </li>
+                {% endif %}
             {% endfor %}
             </ul>
         </div>
         <div class="col m5 s12">
             <ul class="collapsible">
-            {% for term in terms %}
-            {% if loop.index % 2 == 0 %}
-                <li>
-                    <div class="collapsible-header grey darken-3 white-text header">
-                        <i class="fas fa-caret-down"></i>
-                        <strong class="capitalize header">{{term.term_name}}</strong>
-                    </div>
-                    <div class="collapsible-body white main-text">
-                       <h6 class="capitalize header">{{term.category_name}}</h6>
-                       <p class="main-text">{{term.definition}}</p><br>
-                       <a target="_blank" href="{{term.source_url}}">Read More Here</a>
-                       <p class="header capitalize">By: {{term.created_by}}</p> 
-                    </div>
-                </li>
-            {% endif %}
-            {% endfor %}
+                {% for term in terms %}
+                    {% if loop.index % 2 == 0 %}
+                        <li>
+                            <div class="collapsible-header grey darken-3 white-text header">
+                                <i class="fas fa-caret-down"></i>
+                                <strong class="capitalize header">{{term.term_name}}</strong>
+                            </div>
+                            <div class="collapsible-body white main-text">
+                            <h6 class="capitalize header">{{term.category_name}}</h6>
+                            <p class="main-text">{{term.definition}}</p><br>
+                            <a target="_blank" href="{{term.source_url}}">Read More Here</a>
+                            <p class="header capitalize">By: {{term.created_by}}</p> 
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
             </ul>
         </div>
+        {% else %}
+            <h2 class="header center-align capitalize red-text">no results found</h2>
+        {% endif %}
     </div>
+
+
 
 
 {% endblock %}
