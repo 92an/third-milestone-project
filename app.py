@@ -41,21 +41,31 @@ def homepage():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     username = session["user"]
+    categories = mongo.db.categories.find().sort("category_name", 1)
     query = request.form.get("query")
     query_category = request.form.get("category_query")
 
     if len(query) > 0:
+        categories = mongo.db.categories.find().sort("category_name", 1)
         terms = list(mongo.db.terms.find({"$text": {"$search": query}}))
-        return render_template("terms.html", terms=terms, username=username)
+        return render_template(
+            "terms.html", terms=terms,
+            categories=categories, username=username)
 
     elif query_category != "":
+        categories = mongo.db.categories.find().sort("category_name", 1)
         terms = list(mongo.db.terms.find(
             {"$text": {"$search": query_category}}))
-        return render_template("terms.html", terms=terms, username=username)
+        return render_template(
+            "terms.html", terms=terms,
+            categories=categories, username=username)
 
     else:
+        categories = mongo.db.categories.find().sort("category_name", 1)
         terms = list(mongo.db.terms.find())
-        return render_template("terms.html", terms=terms, username=username)
+        return render_template(
+            "terms.html", terms=terms,
+            categories=categories, username=username)
 
 
 """ the following four sections implements CRUD functionallity

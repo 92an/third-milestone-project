@@ -13,7 +13,8 @@
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
 - [Bugs:](#Bugs)
-- [username responsive profile in navigation:](#username-responsive-profile-in-navigation)
+    - [username responsive profile in navigation:](#username-responsive-profile-in-navigation)
+    - [categories stopped functioning after first filter:](#categories-stopped-functioning-after-first-filter)
 - [References:](#References)
     - [Images:](#Images)
     - [Logo:](#Logo)
@@ -185,6 +186,13 @@ fixed it by adding the last line:
             "created_by": session["user"]
         }
 ```
+
+## categories stopped functioning after first filter
+
+after using the categories filter selection in the search function, the categories dissapeared.
+This was solved as I forgott to add the categories section to each of the render template in the search sections
+in the app.py file
+
 # References:
 
 ## Images
