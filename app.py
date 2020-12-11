@@ -38,6 +38,14 @@ def homepage():
     return render_template("homepage.html")
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    username = session["user"]
+    query = request.form.get("query")
+    terms = list(mongo.db.terms.find({"$text": {"$search": query}}))
+    return render_template("terms.html", terms=terms, username=username)
+
+
 """ the following four sections implements CRUD functionallity
 to the Economics Dictionary; they are implemented in the
 following order: Read, Create, Update and Delete. """
