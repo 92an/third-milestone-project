@@ -257,6 +257,18 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/chattrooms")
+def chattrooms():
+    username = session["user"]
+    return render_template("chattrooms.html",username=username)
+
+
+@app.route("/student_chatt")
+def student_chatt():
+    username = session["user"]
+    return render_template("student_chatt.html",username=username)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
