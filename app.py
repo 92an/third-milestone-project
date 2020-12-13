@@ -257,7 +257,16 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-#chattroom functions are built below
+# chattroom functions are built below
+chatt_messages = []
+
+
+def add_message(username, message):
+    chatt_messages.append("{}: {}".format(username, message))
+
+
+def get_messages():
+    return "<br>".join(chatt_messages)
 
 
 @app.route("/chattrooms")
@@ -269,14 +278,16 @@ def chattrooms():
 @app.route("/student_chatt")
 def student_chatt():
     username = session["user"]
-    return render_template("student_chatt.html", username=username)
+    chatt = get_messages()
+    return render_template(
+        "student_chatt.html", username=username, chatt=chatt)
 
 
 @app.route("/student_chatt/<message>")
 def student_chatt_message(message):
     username = session["user"]
-    return render_template(
-        "student_chatt.html", username=username, message=message)
+    add_message(username, message)
+    return redirect(url_for("student_chatt"))
 
 
 if __name__ == "__main__":
