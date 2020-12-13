@@ -264,11 +264,12 @@ chatt_messages = []
 
 def add_message(username, message):
     now = datetime.now().strftime("%H:%M:%S")
-    chatt_messages.append("{} - {}: {}".format(now, username, message))
-
-
-def get_messages():
-    return "<br>".join(chatt_messages)
+    chatt_messages_dict = {
+        "timestamp": now,
+        "from": username,
+        "message": message
+    }
+    chatt_messages.append(chatt_messages_dict)
 
 
 @app.route("/chattrooms")
@@ -280,10 +281,9 @@ def chattrooms():
 @app.route("/student_chatt")
 def student_chatt():
     username = session["user"]
-    chatt = get_messages()
-    return "{0}: {1}".format(username, chatt)
-    # return render_template(
-    #     "student_chatt.html", username=username, chatt=chatt)
+    chatt = chatt_messages
+    return render_template(
+        "student_chatt.html", username=username, chatt=chatt)
 
 
 @app.route("/student_chatt/<message>")

@@ -3,11 +3,12 @@
 {% block content %}
 
 <h2 class="header center-align capitalize">student Chattroom</h2>
+<h3 class="header center-align capitalize">Welcome {{username}}</h3>
 
+{% for message in chatt %}
+    <p> {{message.timestamp}} - {{message.from}}: {{message.message}} </p>
+{% endfor %}
 
-<p>
-{{ chatt }}    
-</p>
 
 <br><a href="{{ url_for('chattrooms') }}" class="col s4 offset-s1 btn-large center-align cyan darken-3">
 Leave Chattroom                 
