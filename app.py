@@ -258,11 +258,18 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/chattrooms")
+def chattrooms():
+    username = session["user"]
+    return render_template("chattrooms.html", username=username)
+
+
 # chattroom functions are built below
 chatt_messages = []
 
 
 def add_message(username, message):
+    # Populates the list of messages
     now = datetime.now().strftime("%H:%M:%S")
     chatt_messages_dict = {
         "timestamp": now,
@@ -272,16 +279,19 @@ def add_message(username, message):
     chatt_messages.append(chatt_messages_dict)
 
 
-@app.route("/chattrooms")
-def chattrooms():
-    username = session["user"]
-    return render_template("chattrooms.html", username=username)
-
-
-@app.route("/student_chatt")
+@app.route("/student_chatt",  methods=["GET", "POST"])
 def student_chatt():
-    username = session["user"]
+    # display messages to screen
+
+    if request.method == "POST":
+        username = session["user"]
+        message = request.form.get("message_box")
+        add_message(username, message)
+        chatt = chatt_messages
+        return redirect(url_for("student_chatt"))
+
     chatt = chatt_messages
+    username = session["user"]
     return render_template(
         "student_chatt.html", username=username, chatt=chatt)
 
