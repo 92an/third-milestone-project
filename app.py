@@ -2,6 +2,7 @@ import os
 from flask import (
     Flask, flash, render_template, g,
     redirect, request, session, url_for)
+from datetime import datetime
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -262,7 +263,8 @@ chatt_messages = []
 
 
 def add_message(username, message):
-    chatt_messages.append("{}: {}".format(username, message))
+    now = datetime.now().strftime("%H:%M:%S")
+    chatt_messages.append("{} - {}: {}".format(now, username, message))
 
 
 def get_messages():
@@ -279,8 +281,9 @@ def chattrooms():
 def student_chatt():
     username = session["user"]
     chatt = get_messages()
-    return render_template(
-        "student_chatt.html", username=username, chatt=chatt)
+    return "{0}: {1}".format(username, chatt)
+    # return render_template(
+    #     "student_chatt.html", username=username, chatt=chatt)
 
 
 @app.route("/student_chatt/<message>")
