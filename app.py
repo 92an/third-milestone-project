@@ -265,6 +265,7 @@ def chattrooms():
 
 
 # chattroom functions are built below
+# chattroom for students functions are built below
 chatt_messages = []
 
 
@@ -281,7 +282,7 @@ def add_message(username, message):
 
 @app.route("/student_chatt",  methods=["GET", "POST"])
 def student_chatt():
-    # display messages to screen
+    # add and display messages to screen
 
     if request.method == "POST":
         username = session["user"]

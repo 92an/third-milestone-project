@@ -206,6 +206,14 @@ Image by <a href="https://pixabay.com/users/ahmadardity-3112014/?utm_source=link
 
 Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=499481">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=499481">Pixabay</a>
 
+Image by <a href="https://pixabay.com/users/satyaprem-6578610/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4174613">SatyaPrem</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4174613">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/tama66-1032521/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3466906">Peter H</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3466906">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/quincecreative-1031690/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2891828">3D Animation Production Company</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2891828">Pixabay</a>
+
+Image by <a href="https://pixabay.com/users/startupstockphotos-690514/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=849825">StartupStockPhotos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=849825">Pixabay</a>
+
 Keynes image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:John_Maynard_Keynes.jpg)
 
 Rothbard image comes from Wikipedia common library [here:](https://commons.wikimedia.org/wiki/File:Murray_Rothbard.jpg)

@@ -129,3 +129,9 @@
 .category-cards {
     height: 70px !important;
 }
+
+/******************************************* Chattrooms ************************************************/
+
+.chatroom-card img {
+    height: 350px;
+}
