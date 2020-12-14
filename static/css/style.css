@@ -132,6 +132,10 @@
 
 /******************************************* Chattrooms ************************************************/
 
+.chatroom-card .card-content {
+    height: 150px;
+}
+
 .chatroom-card img {
     height: 350px;
 }
