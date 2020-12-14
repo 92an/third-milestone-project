@@ -79,7 +79,8 @@ def get_terms():
     username = session["user"]
     terms = list(mongo.db.terms.find())
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("terms.html", terms=terms, categories=categories, username=username)
+    return render_template(
+        "terms.html", terms=terms, categories=categories, username=username)
 
 
 @app.route("/add_term", methods=["GET", "POST"])
@@ -265,8 +266,105 @@ def chattrooms():
 
 
 # chattroom functions are built below
+
+# chattroom for microeconomics functions are built below
+chatt_messages_micro = []
+
+
+def add_message_micro_chatt(username, message):
+    # Populates the list of messages
+    now = datetime.now().strftime("%H:%M:%S")
+    chatt_messages_dict = {
+        "timestamp": now,
+        "from": username,
+        "message": message
+    }
+    chatt_messages_micro.append(chatt_messages_dict)
+
+
+@app.route("/micro_chatt",  methods=["GET", "POST"])
+def micro_chatt():
+    # add and display messages to screen
+
+    if request.method == "POST":
+        username = session["user"]
+        message = request.form.get("message_box")
+        add_message_micro_chatt(username, message)
+        chatt = chatt_messages_micro
+        return redirect(url_for("micro_chatt"))
+
+    chatt = chatt_messages_micro
+    username = session["user"]
+    return render_template(
+        "micro_chatt.html", username=username, chatt=chatt)
+
+
+# chattroom for macroeconomics functions are built below
+chatt_messages_macro = []
+
+
+def add_message_macro_chatt(username, message):
+    # Populates the list of messages
+    now = datetime.now().strftime("%H:%M:%S")
+    chatt_messages_dict = {
+        "timestamp": now,
+        "from": username,
+        "message": message
+    }
+    chatt_messages_macro.append(chatt_messages_dict)
+
+
+@app.route("/macro_chatt",  methods=["GET", "POST"])
+def macro_chatt():
+    # add and display messages to screen
+
+    if request.method == "POST":
+        username = session["user"]
+        message = request.form.get("message_box")
+        add_message_macro_chatt(username, message)
+        chatt = chatt_messages_macro
+        return redirect(url_for("macro_chatt"))
+
+    chatt = chatt_messages_macro
+    username = session["user"]
+    return render_template(
+        "macro_chatt.html", username=username, chatt=chatt)
+
+
+# chattroom for political economy functions are built below
+chatt_messages_political = []
+
+
+def add_message_political_chatt(username, message):
+    # Populates the list of messages
+    now = datetime.now().strftime("%H:%M:%S")
+    chatt_messages_dict = {
+        "timestamp": now,
+        "from": username,
+        "message": message
+    }
+    chatt_messages_political.append(chatt_messages_dict)
+
+
+@app.route("/political_chatt",  methods=["GET", "POST"])
+def political_chatt():
+    # add and display messages to screen
+
+    if request.method == "POST":
+        username = session["user"]
+        message = request.form.get("message_box")
+        add_message_macro_chatt(username, message)
+        chatt = chatt_messages_political
+        return redirect(url_for("political_chatt"))
+
+    chatt = chatt_messages_political
+    username = session["user"]
+    return render_template(
+        "political_chatt.html", username=username, chatt=chatt)
+
+
 # chattroom for students functions are built below
-chatt_messages = []
+chatt_messages_student = []
 
 
 def add_message_student_chatt(username, message):
@@ -277,7 +375,7 @@ def add_message_student_chatt(username, message):
         "from": username,
         "message": message
     }
-    chatt_messages.append(chatt_messages_dict)
+    chatt_messages_student.append(chatt_messages_dict)
 
 
 @app.route("/student_chatt",  methods=["GET", "POST"])
@@ -288,10 +386,10 @@ def student_chatt():
         username = session["user"]
         message = request.form.get("message_box")
         add_message_student_chatt(username, message)
-        chatt = chatt_messages
+        chatt = chatt_messages_student
         return redirect(url_for("student_chatt"))
 
-    chatt = chatt_messages
+    chatt = chatt_messages_student
     username = session["user"]
     return render_template(
         "student_chatt.html", username=username, chatt=chatt)
