@@ -269,7 +269,7 @@ def chattrooms():
 chatt_messages = []
 
 
-def add_message(username, message):
+def add_message_student_chatt(username, message):
     # Populates the list of messages
     now = datetime.now().strftime("%H:%M:%S")
     chatt_messages_dict = {
@@ -287,7 +287,7 @@ def student_chatt():
     if request.method == "POST":
         username = session["user"]
         message = request.form.get("message_box")
-        add_message(username, message)
+        add_message_student_chatt(username, message)
         chatt = chatt_messages
         return redirect(url_for("student_chatt"))
 
@@ -295,13 +295,6 @@ def student_chatt():
     username = session["user"]
     return render_template(
         "student_chatt.html", username=username, chatt=chatt)
-
-
-@app.route("/student_chatt/<message>")
-def student_chatt_message(message):
-    username = session["user"]
-    add_message(username, message)
-    return redirect(url_for("student_chatt"))
 
 
 if __name__ == "__main__":
