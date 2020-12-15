@@ -18,6 +18,7 @@
         - [CSS:](#CSS)
         - [CSS:](#JS)
     - [Responsive Testing:](#Responsive-Testing)
+    - [Functionality:](#Functionality)
 - [Bugs:](#Bugs)
     - [username responsive profile in navigation:](#username-responsive-profile-in-navigation)
     - [categories stopped functioning after first filter:](#categories-stopped-functioning-after-first-filter)
