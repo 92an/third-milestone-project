@@ -155,16 +155,16 @@ However it does not like jinja templating language
 * [x] homepage.html
 * [x] terms.html
 * [x] chattrooms.html
-* [] micro_chatt.html
-* [] macro_chatt.html
-* [] political_chatt.html
-* [] student_chatt.html
-* [] register.html
-* [] login.html
-* [] profile.html
-* [] add_terms.html
-* [] categories.html
-* [] add_categories.html
+* [x] micro_chatt.html
+* [x] macro_chatt.html
+* [x] political_chatt.html
+* [x] student_chatt.html
+* [x] register.html
+* [x] login.html
+* [x] profile.html
+* [x] add_terms.html
+* [x] categories.html
+* [x] add_categories.html
 
 #### CSS
 Validated with https://jigsaw.w3.org/css-validator/
