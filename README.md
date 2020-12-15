@@ -12,6 +12,8 @@
 - [Project Purpose:](#project-purpose)
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
+- [Design:](#Design)
+- [Future Features:](#Future-Features) 
 - [Testing:](#Testing)
     - [Validation:](#Validation)
         - [HTML:](#HTML)
@@ -150,7 +152,31 @@ such as models and theories, using a community-built dictionary. Enable discussi
 * As an admin I should be able to alter the categories available in the dictionary.
 * As an admin I should be able to edit and delete terms by all users.
 * As an admin I should be able to enter chatrooms to moderate debates.
-* As an admin I should be able to contact registered users.
+
+# Design
+
+The purpose of this project is to appeal to an academic side, 
+so I chose a grayscale theme, with simple buttons to give a 
+text/bookish feeling. A light grey background on the body making 
+the white cards pop like papers on a desk. It has links to 
+economics resources at the bottom rather than generic social 
+media links, sticking to the theming. Images reflect economic 
+nature, such as charts, banks, and trading. The homepage was made 
+in an effort to inspire economic reasoning by providing some 
+wisdom from famous thinkers.
+
+# Future Features
+
+These features were not considered due to time constraints
+
+* more backend logic to check for admin users rather than relying on the front end Menu
+* change admin to a bolean category, to enable multiple users to be admins rather than admin name
+* more modern design on chattroom
+* Source page to link economic data from example the OECD to facilitate study.
+* adding subcategories such as Finance > Techincal analysis
+* way to contact administrators
+* way for adminstrators to contact users
+* confirmation modals for delete functions and edit functions
 
 # Testing
 
