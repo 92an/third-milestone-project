@@ -12,6 +12,12 @@
 - [Project Purpose:](#project-purpose)
 - [User Stories:](#user-stories)
 - [Admin functionality:](#Admin-functionality)
+- [Testing:](#Testing)
+    - [Validation:](#Validation)
+        - [HTML:](#HTML)
+        - [CSS:](#CSS)
+        - [CSS:](#JS)
+    - [Responsive Testing:](#Responsive-Testing)
 - [Bugs:](#Bugs)
     - [username responsive profile in navigation:](#username-responsive-profile-in-navigation)
     - [categories stopped functioning after first filter:](#categories-stopped-functioning-after-first-filter)
@@ -173,6 +179,58 @@ Validated with https://jigsaw.w3.org/css-validator/
 Validated with https://jshint.com/
 * [x] script.js
 * [x] chatt_refresh.js
+
+## Responsive Testing
+Done on google chrome only and is the recomended browser
+
+* Mobile S 320px
+* Mobile M 375px
+* Mobile L 425px
+* Tablet 768px
+* Laptop 1024px
+* Laptop L 1440px
+
+
+|Design Test|Mobile S|Mobile M|Mobile L|
+|-----------|:--------:|:--------:|:--------:|
+|homepage.html|poor|ok|ok|
+|terms.html|poor|ok|ok|
+|chattrooms.html|poor|ok|ok|
+|micro_chatt.html|poor|ok|ok|
+|macro_chatt.html|poor|ok|ok|
+|political_chatt.html|poor|ok|ok|
+|student_chatt.html|poor|ok|ok|
+|register.html|poor|ok|ok|
+|login.html|poor|ok|ok|
+|profile.html|poor|ok|ok|
+|add_terms.html|poor|ok|ok|
+|categories.html|poor|ok|ok|
+|add_categories.html|poor|ok|ok|
+
+<p>&nbsp;</p>
+
+|Design Test|Tablet|Laptop|Laptop L|
+|-----------|:------:|:------:|:--------:|
+|homepage.html|ok|ok|ok|
+|terms.html|ok|ok|ok|
+|chattrooms.html|ok|ok|ok|
+|micro_chatt.html|ok|ok|ok|
+|macro_chatt.html|ok|ok|ok|
+|political_chatt.html|ok|ok|ok|
+|student_chatt.html|ok|ok|ok|
+|register.html|ok|ok|ok|
+|login.html|poor|ok|ok|
+|profile.html|ok|ok|ok|
+|add_terms.html|ok|ok|ok|
+|categories.html|ok|ok|ok|
+|add_categories.ok|poor|ok|ok|
+
+<p>&nbsp;</p>
+
+**NOTE that is is not ideal to operate on the smalest screen.
+Though functional the is some overflow issue and is rather impractical
+on smaller screens. Though since it is expeted
+
 
 # Bugs
 
