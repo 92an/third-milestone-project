@@ -145,6 +145,34 @@ such as models and theories, using a community-built dictionary. Enable discussi
 * As an admin I should be able to enter chatrooms to moderate debates.
 * As an admin I should be able to contact registered users.
 
+# Testing
+
+## Validation
+
+#### HTML
+Validated with https://validator.w3.org/
+* [] homepage.html
+* [] terms.html
+* [] chattrooms.html
+* [] micro_chatt.html
+* [] macro_chatt.html
+* [] political_chatt.html
+* [] student_chatt.html
+* [] register.html
+* [] login.html
+* [] profile.html
+* [] add_terms.html
+* [] categories.html
+* [] add_categories.html
+
+#### CSS
+Validated with https://jigsaw.w3.org/css-validator/
+* [x] style.css
+#### JS
+Validated with https://jshint.com/
+* [x] script.js
+* [x] chatt_refresh.js
+
 # Bugs
 
 ## username responsive profile in navigation
