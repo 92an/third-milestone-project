@@ -151,9 +151,10 @@ such as models and theories, using a community-built dictionary. Enable discussi
 
 #### HTML
 Validated with https://validator.w3.org/
+However it does not like jinja templating language
 * [x] homepage.html
-* [] terms.html
-* [] chattrooms.html
+* [x] terms.html
+* [x] chattrooms.html
 * [] micro_chatt.html
 * [] macro_chatt.html
 * [] political_chatt.html
