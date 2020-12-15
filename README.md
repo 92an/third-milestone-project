@@ -151,7 +151,7 @@ such as models and theories, using a community-built dictionary. Enable discussi
 
 #### HTML
 Validated with https://validator.w3.org/
-* [] homepage.html
+* [x] homepage.html
 * [] terms.html
 * [] chattrooms.html
 * [] micro_chatt.html
