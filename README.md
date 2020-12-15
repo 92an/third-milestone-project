@@ -219,18 +219,57 @@ Done on google chrome only and is the recomended browser
 |political_chatt.html|ok|ok|ok|
 |student_chatt.html|ok|ok|ok|
 |register.html|ok|ok|ok|
-|login.html|poor|ok|ok|
+|login.html|ok|ok|ok|
 |profile.html|ok|ok|ok|
 |add_terms.html|ok|ok|ok|
 |categories.html|ok|ok|ok|
-|add_categories.ok|poor|ok|ok|
+|add_categories.ok|ok|ok|ok|
 
 <p>&nbsp;</p>
 
+Tested device formats:
+
+* Moto G4
+* Galaxy S5
+* Pixel 2
+* Pixel 2 XL
+* iPhone 5/SE
+* iPhone 6/7/8
+* iPhone 6/7/8 Plus
+* iPhone X
+* iPad
+* iPad Pro
+* Surface Duo
+* Galaxy Fold
+
 **NOTE that is is not ideal to operate on the smalest screen.
 Though functional the is some overflow issue and is rather impractical
-on smaller screens. Though since it is expeted
+on smaller screens. Though since it is expeted that the user is someone
+working on a laptop, or studying mobile devices are not the main device
+that the use might use.
 
+## Functionality
+
+|Function|status|
+|-----------|:------:|
+|Menubar is dynamically changing based on who is logged in|ok|
+|Only admin can see category section|ok|
+|Only admin can see all tasks in profile section to delete or edit|ok|
+|Users can only see their own terms in their profile to delete or edit|ok|
+|Register user function works|ok|
+|Login function works|ok|
+|Log out works|ok|
+|Forms have a cancel button to return|ok|
+|Terms can be added to the dictionary in the profile section|ok|
+|Terms can be updated in the dictionary in the profile section|ok|
+|Terms can be deleted from the dictionary in the profile section|ok|
+|Terms can read in the dictionary|ok|
+|User can enter chattrooms|ok|
+|User can leave chattrooms|ok|
+|User can communicate in chattrooms|ok|
+|Admin can alter all terms|ok|
+|Admin can add categories|ok|
+|Admin can delete categories|ok|
 
 # Bugs
 
