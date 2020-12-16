@@ -25,6 +25,7 @@
     - [username responsive profile in navigation:](#username-responsive-profile-in-navigation)
     - [categories stopped functioning after first filter:](#categories-stopped-functioning-after-first-filter)
 - [References:](#References)
+    - [inspiration:](#inspiration)
     - [Images:](#Images)
     - [Logo:](#Logo)
 
@@ -347,6 +348,11 @@ This was solved as I forgott to add the categories section to each of the render
 in the app.py file
 
 # References:
+
+## inspiration
+
+The basis of the project came as an application of the task manager miniproject and chatt-app miniproject.
+To merge and further develop the concepts and place them in a new setting. 
 
 ## Images
 Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2365538">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2365538">Pixabay</a>
