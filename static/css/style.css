@@ -59,6 +59,10 @@
     position: absolute;
 }
 
+#username-dropdown {
+    width: auto !important;
+}
+
 /* Footer */
 
 
